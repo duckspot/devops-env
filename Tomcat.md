@@ -18,6 +18,8 @@ Tomcat for Web Development
 ----------------------------------------
 [Apache Tomcat] is an open source web server and servlet container.  This means it can serve both static web pages, and dynamic pages where a Java Servlet runs for each web request, and produces a custom web page as needed based on the user request.
 
+Tomcat is not a full JavaEE implementation.  There are portions of the Enterprise JavaBeans specifiction that aren't supported by Tomcat.  I have yet to find this a problem for any of the study I've done in Java Web Development thus far, however
+
 It's also pretty easy to setup, and not too big.  It supports JSP (Java Server Pages) and JSF (JavaServer Faces).
 
 Other servlet containers
