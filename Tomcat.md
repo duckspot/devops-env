@@ -14,17 +14,14 @@ This is post 3 of an ongoing series of posts:
 
 let's put tomcat logo here (from https://en.wikipedia.org/wiki/File:Tomcat-logo.svg )
 
-Tomcat for Web Development
-----------------------------------------
+Tomcat for Learning Web Development
+----------------------------------------------------
 [Apache Tomcat] is an open source web server and servlet container.  This means it can serve both static web pages, and dynamic pages where a Java Servlet runs for each web request, and produces a custom web page as needed based on the user request.
 
-Tomcat is not a full JavaEE implementation.  There are portions of the Enterprise JavaBeans specifiction that aren't supported by Tomcat.  I have yet to find this a problem for any of the study I've done in Java Web Development thus far, however
-
-It's also pretty easy to setup, and not too big.  It supports JSP (Java Server Pages) and JSF (JavaServer Faces).
+Tomcat is not a full JavaEE implementation.  There are portions of the Enterprise JavaBeans specifiction that aren't supported by Tomcat, however for learning Servlets, JSP, and JavaServer Faces, Tomcat is more than sufficient.
 
 Other servlet containers
 --------------------------------
-
 The servlet container standard allows software written to it's specification to run on a variety of platforms, with little or no modification.  
 
 Other servlet container you'll likely see mention of are:
@@ -32,7 +29,7 @@ Other servlet container you'll likely see mention of are:
 * **[Glassfish]** - This is Oracle's full featured corporate powerhouse web application server.
 * **[Jetty]** - Jetty is a small server that can easily be incorporated into a Java application to allow it to work without any external web server.
 * **[WildFly]** - This is JBoss' web server.  It's got some functionality that 
-* **[Google App Engine]** - Google's cloud platform web server functions as a Servlet Container, but has some key differences.
+* **[Google App Engine]** - Google's cloud platform web server can function as a Servlet Container, but doesn't allow writing data files on the server.
 
 [Apache Tomcat]: https://en.wikipedia.org/wiki/Apache_Tomcat (wikipedia.org)
 [Glassfish]: https://en.wikipedia.org/wiki/GlassFish (wikipedia.org)
@@ -40,5 +37,21 @@ Other servlet container you'll likely see mention of are:
 [WildFly]: https://en.wikipedia.org/wiki/Wildfly (wikipedia.org)
 [Google App Engine]: https://en.wikipedia.org/wiki/Google_App_Engine (wikipedia.org)
 
+Since these other servers add functionality to Tomcat, we can be assured if our application runs on Tomcat, it'll run anywhere (with the exception of writing files on Google App Engine).
+
 Add Tomcat to PortaDev
 ---------------------------------
+We don’t need to run any install scripts for this, so it can be done on a computer where you do not have administrator privileges.
+
+Steps:
+
+1. Use your web browser to navigate to [tomcat.apache.org/download-70.cgi][tcdl].
+2. Download Binary Distribution: Core: zip
+3. Extract the contents of this zip files into your /dev/tools folder in your PortaDev partition.
+4. Add the following lines to the end of /dev/tools/setup.bat.  Replace the version number with the actual version number of Tomcat that you downloaded.
+```
+set TOMCAT_HOME=%DEV_TOOLS%\apache-tomcat-7.0.52
+path %TOMCAT_HOME%\bin;%path%
+```
+
+[tcdl]: http://tomcat.apache.org/download-70.cgi
