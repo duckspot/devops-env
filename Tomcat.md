@@ -40,7 +40,7 @@ Other servlet container you'll likely see mention of are:
 Since these other servers add functionality to Tomcat, we can be assured if our application runs on Tomcat, it'll run anywhere (with the exception of writing files on Google App Engine).
 
 Add Tomcat to PortaDev
----------------------------------
+----------------------
 We don’t need to run any install scripts for this, so it can be done on a computer where you do not have administrator privileges.
 
 Steps:
@@ -55,3 +55,24 @@ path %TOMCAT_HOME%\bin;%path%
 ```
 
 [tcdl]: http://tomcat.apache.org/download-70.cgi
+
+Starting and Stopping the Tomcat Server
+---------------------------------------
+First start the development environment:
+
+1. Connect your USB drive (if not already connected.)
+2. Note what drive letter your "PortaDev" partition is assigned to.
+3. Press the ![][windows key]‘Windows’ key and type “command”, then select “Command Prompt”.
+4. Type the portable development setup command.
+```
+F:\dev\setup F \dev
+```
+Replace F with the drive letter your “PortaDev” partition is assigned to. Note – the second F is not followed by a colon (:).
+
+Now you can start the tomcat server by typing "startup" at the development command prompt.
+
+Navigate to the tomcat server's home page at http://localhost:8080/ to make sure it's working.
+
+Shutdown the tomcat server by typeing "shutdown" at the development command prompt.
+
+[windows key]: http://duckspot.files.wordpress.com/2014/02/windowskey15.png?w=18&h=15
