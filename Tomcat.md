@@ -95,6 +95,7 @@ If you want to use Netbeans to develop web applications that run on Tomcat, you'
 ### Tell Netbeans about the Tomcat server
 
 Unfortunately Netbeans stores drive letters in it's configuration data, so each time you use PortaDev on a new drive letter you'll need to perform this piece of the setup again in Netbeans.  Fortunately it's not very complicated:
+
 1. Start netbeans if it's not already started.
 2. Select menu item Tools/Servers
 3. Click [Add server...]
