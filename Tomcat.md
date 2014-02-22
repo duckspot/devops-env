@@ -76,3 +76,33 @@ Navigate to the tomcat server's home page at http://localhost:8080/ to make sure
 Shutdown the tomcat server by typeing "shutdown" at the development command prompt.
 
 [windows key]: http://duckspot.files.wordpress.com/2014/02/windowskey15.png?w=18&h=15
+
+Getting Netbeans to work with Tomcat
+------------------------------------
+
+If you want to use Netbeans to develop web applications that run on Tomcat, you'll want to do two things:
+
+### Download the "Java EE Base" plug in for Netbeans
+
+1. Type 'netbeans' at the PortaDev command prompt.  
+2. Select menu Tools/Plugins
+3. Click on the [Available Plugins] tab.
+4. Enter 'Java EE Base' in the Search blank (near the top right of the Plugins window.)
+5. Place a checkmark next to Jave EE Base in the left column.
+6. Click [Install]
+7. Restart Netbeans once plugin installation is complete.
+ 
+### Tell Netbeans about the Tomcat server
+
+Unfortunately Netbeans stores drive letters in it's configuration data, so each time you use PortaDev on a new drive letter you'll need to perform this piece of the setup again in Netbeans.  Fortunately it's not very complicated:
+1. Start netbeans if it's not already started.
+2. Select menu item Tools/Servers
+3. Click [Add server...]
+4. Choose Server: 'Apache Tomcat', press [Next]
+5. Click [Browse...] and browse to the \dev\tools\apache-tomcat-7.0.52 folder.
+6. Enter a Username/Password for netbeans.  These don't need to be secure, as your server won't be available on the Internet.  I use "netbeans" as both the username and password.
+7. Click [Finish]
+
+Now you can create a Web Application and start it right from Netbeans.
+
+[post-3]: http://duckspot.wordpress.com/2014/02/20/add-netbeans-ide-to-portable-development/
