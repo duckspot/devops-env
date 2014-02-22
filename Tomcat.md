@@ -104,6 +104,19 @@ Unfortunately Netbeans stores drive letters in it's configuration data, so each 
 6. Enter a Username/Password for netbeans.  These don't need to be secure, as your server won't be available on the Internet.  I use "netbeans" as both the username and password.
 7. Click [Finish]
 
-Now you can create a Web Application and start it right from Netbeans.
+### Create a Web Application in Netbeans
 
-[post-3]: http://duckspot.wordpress.com/2014/02/20/add-netbeans-ide-to-portable-development/
+1. Start netbeans (if it's not already started.)
+2. Menu File/New Project...
+3. Click on Categories: Java Web
+4. Click on Projects: Web Application
+5. Click [Next]
+6. Project Name: HelloWeb
+7. Project Location: \dev\learn\JavaWeb\HelloWeb
+8. Click [Next]
+9. Server: Apache Tomcat
+10. Context Path: /HelloWeb
+11. Click [Finish]
+12. Menu Run/Run Project (HelloWeb)
+
+That's it.
